@@ -1,0 +1,130 @@
+# 36. Find the largest element in a list.
+
+def largest(lst):
+    return max(lst)
+print(largest([3,7,3,9,5,2,7]))
+
+
+
+# 37. Find the second largest element in a list.
+
+def second_largest(lst):
+    return sorted(set(lst))[-2]
+print(second_largest([3,3,2,19,32,35]))
+
+
+
+# 38.Reverse a list without using build-ins.
+
+def reverse_list(lst):
+    return lst[::-1]
+print(reverse_list([2,68,2,9,2,1]))
+
+
+
+# 39. Remove duplicate from a list.
+
+def remove_dup_list(lst):
+    return list(dict.fromkeys(lst))
+print(remove_dup_list([2,4,5,4,4,6,3,2]))
+
+
+
+# 40. Sort a list without using sort().
+
+def bubble_sort(lst):
+    lst = lst.copy()
+    n = len(lst)
+    for i in range(n):
+        for j in range(n- i -1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst
+print(bubble_sort([5,3,7,2,1,8,4,2]))
+
+
+
+# 41. Find the sum of a list.
+
+def list_sum(lst):
+    return sum(lst)
+print(list_sum([3,5,2,4,2,1]))
+
+
+
+# 42. Find the average of a list.
+
+def list_avg(lst):
+    return sum(lst)/len(lst)
+print(list_avg([1,2,3,4,5,6,7]))
+    
+    
+    
+# 43. Merge two lists into one.
+
+def merge_two_list(l1 , l2):
+    return l1 + l2
+print(merge_two_list([1,4,2,2], [3,4,8,2]))
+    
+    
+    
+# 44. Find the common elemens between two lists.
+
+def common_element(l1,l2):
+    return list(set(l1) & set(l2))
+print(common_element([1,3,6,2,5],[2,6,3,4,8,3]))
+    
+    
+    
+# 45. Find the intersection of two lists.
+
+def list_intersection(l1, l2):
+    return list(set(l1) & set(l2))
+print(list_intersection([2,4,7,2,1],[2,5,8,2,6]))
+
+
+
+# 46.Flatten a nested list.
+
+def flatten(nested):
+    result = []
+    for item in nested:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+    return result
+print(flatten([1,[2,3],[4,[5,6]]]))
+
+
+
+# 47. Count how many times an element appears in a list.
+
+def count_occurrenece(lst, item):
+    return lst.count(item)
+print(count_occurrenece([1,2,2,3,4],2))
+
+
+
+# 48. Find the missing numbers in a list from 1 to N.
+
+def find_missing(lst, n):
+    return sum(range(1, n + 1) - sum(lst))
+print(find_missing([1,2,4,5],5))
+
+
+
+# 49.Rotate a list by k postions.
+
+def rotate_list(lst, k):
+    k = k % len(lst)
+    return lst[k:] + lst[:k]
+print(rotate_list([1,2,3,4,5],2))
+
+
+
+# 50. Check if a list is already sorted.
+
+def is_sorted(lst):
+    return lst == sorted(lst)
+print(is_sorted([1,2,3,4]))
