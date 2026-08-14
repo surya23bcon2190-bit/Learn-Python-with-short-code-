@@ -1,0 +1,175 @@
+#From here are basic Python code. Leave a star if you find this easy and informative
+# BASIC(1-20)
+
+# 01. Hello world. The first program everyone writes.
+
+print("Hello world")
+
+
+
+# 02. Swap two variables(without a temporary variable).
+
+a, b = 5, 10
+a , b = b , a
+print(a, b)
+
+
+
+# 03.Check ever or Odd
+
+n = 7
+result = "Even" if n % 2 == 0 else "Odd"
+print(result)
+
+
+
+# 04.Find the largest of three numbers.
+
+x,y,z = 3,9,6
+print(max(x, y, z))
+
+
+
+# 05. Check if a number is prime.
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i==0:
+            return False
+    return True
+print(is_prime(17))
+
+
+
+# 06.Print the Fibonacci series.
+
+def fibonacci(n):
+    a, b = 0,1
+    seq = []
+    for _ in range(n):
+        seq.append(a)
+        a, b = b , a + b
+    return seq
+print(fibonacci(10))
+
+
+
+# 07. Calculate a factorial
+
+def factorial(n):
+    return 1 if n == 0 else n * factorial( n - 1)
+print(factorial(5))
+
+
+
+# 08.Check if a number is a palindrome.
+
+def is_palindrome_num(n):
+    return str(n) == str(n)[::-1]
+print(is_palindrome_num(121))
+
+
+
+# 09. Reverse a number
+
+def reverse_num(n):
+    return int(str(n)[::-1])
+print(reverse_num(12341))
+
+
+
+# 10. Sum the digit of a number
+
+def sum_of_digit(n):
+    return sum(int(d) for d in str(n))
+print(sum_of_digit(12345))
+
+
+
+# 11. Check for an Armstrong number
+
+def is_armstrong(n):
+    digit = str(n)
+    power = len(digit)
+    return n == sum(int(d) ** power for d in  digit)
+print(is_armstrong(153))
+
+
+
+# 12. Convert Celsius to Fahrenheit.
+
+def celsius_to_fahrenheit(c):
+    return(c*9 / 5) + 32
+print(celsius_to_fahrenheit(100))
+
+
+
+# 13. Build a Simple calculator
+
+def calculator(a,b,op):
+    if op == '+': return a + b
+    elif op == '-': return a - b
+    elif op == '*': return a * b
+    elif op == '/': return a / b 
+print(calculator(3, 4,'*'))
+
+
+
+# 14. Check if a yer is a leap year
+
+def is_leap_year(y):
+    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)
+print(is_leap_year(2004))
+
+
+
+# 15. Find the GCD of two numbers
+
+def gcd(a, b):
+    while b:
+        a, b = b , a % b
+    return a 
+print(gcd(48, 18))
+
+
+
+# 16. Find the LCM of two numbers.
+
+def lcm(a, b):
+    return a * b // gcd(a,b)
+print(lcm(4, 6))
+
+
+
+# 17. Print a multiplication table.
+
+def multiplication_table(n):
+    return[n * i for i in range(1, 11)]
+print(multiplication_table(6))
+
+
+
+# 18. Sum the first N natural numbers.
+
+def sum_natural(n):
+    return n * (n + 1) // 2
+print(sum_natural(10))
+
+
+
+# 19. Count the digit in a number. 
+
+def count_digits(n):
+    return len(str(abs(n)))
+print(count_digits(12345))
+
+
+
+# 20. Check if a number is a perfect numbers.
+
+def is_perfect(n):
+    return n == sum(i for i in range(1, n) if n % i ==0)
+print(is_perfect(28))
+
