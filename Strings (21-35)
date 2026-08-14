@@ -1,0 +1,124 @@
+# 21. Reverse a string.
+
+def reverse_string(s):
+    return s[:: -1]
+print(reverse_string("Hello"))
+
+
+
+# 22. Check if a string is a pallindrome.
+
+def is_pallindrome_str(s):
+    return s == s[::-1]
+print(is_pallindrome_str("madam"))
+    
+
+
+# 23. Count the vowels in a string.
+
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in 'aeiou')
+print(count_vowels("HEloow World"))
+
+
+
+# 24. Count the words in a sentence.
+
+def count_words(s):
+    return len(s.split())
+print(count_words("the quick brown fox jump over the lazy dog"))
+
+
+
+# 25. Check if two strings are anagrams.
+
+def is_anagram(s1, s2):
+    return sorted(s1.lower()) == sorted(s2.lower())
+print(is_anagram("listen","silent"))
+
+
+
+# 26. Remove duplicate characters from a string.
+
+def remove_duplicate_str(s):
+    seen = set()
+    result = []
+    for c in s:
+        if c not in seen:
+            seen.add(c)
+            result.append(c)
+    return ''.join(result)
+print(remove_duplicate_str("programming , cunning"))
+
+
+
+# 27. Find the most frequent character in a string.
+
+def most_frequent_char(s):
+    return max(set(s), key=s.count)
+print(most_frequent_char("aabbbcc"))
+
+
+
+# 28.Convert a string to uppercase and lowercase.
+
+def case_convert(s):
+    return s.upper(), s.lower()
+        returprint(case_covert("Hello"))
+
+
+
+# 29.Count occurences of a substring.
+
+def count_substring(s, sub):
+    return s.count(sub)
+print(count_substring("abcabcabc", "abc"))
+
+
+
+# 30. Check if a string is a pangram.
+
+def is_pangram(s):
+    return set('abcdefgghijklmnopqrstuvwxyz').issubset(set(s.lower()))
+print(is_pangram("The quick brown fox jumps over the lazy dog"))
+
+
+
+# 31. Title-case every in a sentence.
+
+def title_case(s):
+    return s.title()
+print(title_case("The great gatsby"))
+
+
+
+# 32. Replace a character throughtout a string.
+
+def replace_char(s, old, new):
+    return s.replace(old, new)
+print(replace_char("banana", "a", "o"))
+
+
+
+# 33.Split a string into a list of words.
+
+def split_words(s):
+    return s.split()
+print(split_words("one two three"))
+
+
+
+# 34. Join a list of a string into one.
+
+def join_words(lst):
+    return ' '.join(lst)
+print(join_words(["one", "two", "three"]))
+
+
+
+# 35.Check if a string contains only digits.
+
+def only_digits(s):
+    return s.isdigit()
+print(only_digits("12345"))
+
