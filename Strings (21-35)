@@ -6,11 +6,11 @@ print(reverse_string("Hello"))
 
 
 
-# 22. Check if a string is a pallindrome.
+# 22. Check if a string is a palindrome.
 
-def is_pallindrome_str(s):
+def is_palindrome_str(s):
     return s == s[::-1]
-print(is_pallindrome_str("madam"))
+print(is_palindrome_str("madam"))
     
 
 
@@ -48,7 +48,7 @@ def remove_duplicate_str(s):
             seen.add(c)
             result.append(c)
     return ''.join(result)
-print(remove_duplicate_str("programming , cunning"))
+print(remove_duplicate_str("programming"))
 
 
 
@@ -64,7 +64,7 @@ print(most_frequent_char("aabbbcc"))
 
 def case_convert(s):
     return s.upper(), s.lower()
-        returprint(case_covert("Hello"))
+print(case_covert("Hello"))
 
 
 
@@ -79,7 +79,7 @@ print(count_substring("abcabcabc", "abc"))
 # 30. Check if a string is a pangram.
 
 def is_pangram(s):
-    return set('abcdefgghijklmnopqrstuvwxyz').issubset(set(s.lower()))
+    return set('abcdefghijklmnopqrstuvwxyz').issubset(set(s.lower()))
 print(is_pangram("The quick brown fox jumps over the lazy dog"))
 
 
@@ -88,7 +88,7 @@ print(is_pangram("The quick brown fox jumps over the lazy dog"))
 
 def title_case(s):
     return s.title()
-print(title_case("The great gatsby"))
+print(title_case("the great gatsby"))
 
 
 
