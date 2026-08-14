@@ -1,0 +1,81 @@
+# 51. Count word frequenccy in a sentence using a dictionary.
+
+def word_frequency(s):
+    freq = {}
+    for w in s.split():
+        freq[w] = freq.get(w, 0) + 1
+    return freq
+print(word_frequency("the cat the dog the cat"))
+
+
+
+# 52. Merge two dictionary.
+
+def merge_dicts(d1, d2):
+    return {**d1, **d2}
+print(merge_dicts({"a":1}, {"b":2}))
+
+
+
+# 53. Find the key with the maximum value.
+
+def key_with_max_value(d):
+    return max(d, key=d.get)
+print(key_with_max_value({"a":3,"b":9,"c":1}))
+
+
+
+# 54.Invert a dictionary(swap keys and values).
+
+def invert_dict(d):
+    return{v : k for k, v in d.items()}
+print(invert_dict({"a":1,"b":2}))
+
+
+
+# 55. Remove a key from a dictionary.
+
+def remove_key(d, key):
+    d = d.copy()
+    d.pop(key, None)
+    return d
+print(remove_key({"a":1, "b":2},"a"))
+
+
+
+# 56. Sort a dictionary by its values.
+def sort_dict_by_value(d):
+    return dict(sorted(d.items(), key=lambda x : x[1]))
+print(sort_dict_by_value({"a":3,"b":1,"c":2}))
+
+
+
+# 57. Check if two sets are disjoint.
+
+def is_disjoint(s1, s2):
+    return s1.isdisjoint(s2)
+print(is_disjoint({1,2},{3,4}))
+
+
+
+# 58. Find the union of two sets.
+
+def set_union(s1,s2):
+    return s1 | s2
+print(set_union({1,2}, {2,3}))
+
+
+
+# 59. Find the difference between two sets.
+
+def set_difference(s1,s2):
+    return s1 - s2
+print(set_difference({1,2,3},{2,3}))
+
+
+
+# 60. Convert two parallel lists into a dictionary.
+
+def lists_to_dict(keys, values):
+    return dict(zip(keys, values))
+print(lists_to_dict(["a","b"], [1,2]))
