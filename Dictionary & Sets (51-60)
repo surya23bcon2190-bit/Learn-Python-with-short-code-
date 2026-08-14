@@ -1,4 +1,4 @@
-# 51. Count word frequenccy in a sentence using a dictionary.
+# 51. Count word frequency in a sentence using a dictionary.
 
 def word_frequency(s):
     freq = {}
