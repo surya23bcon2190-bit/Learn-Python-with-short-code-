@@ -1,0 +1,38 @@
+# 71. Read a text file line by line.
+
+with open("data.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+        
+        
+
+# 72. Write data to a text file.
+
+with open("output.txt", "w") as f:
+    f.write("Hello, file !")
+    
+    
+    
+# 73. Count the number of lines in a file.
+
+with open("data.txt", "r") as f:
+    count = sum(1 for _ in f)
+print(count)
+
+
+
+# 74. Read a CSV file using Python.
+
+import csv
+
+with open("data.txt", "r") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+        
+        
+        
+# 75. Append new data to a existing file.
+
+with open("output.txt", "a") as f:
+    f.write("More text.")
