@@ -1,0 +1,86 @@
+
+
+# OOP BASICS (76-82)
+
+# 76. Create a simple class with attributes.
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+c = Car("Toyoto", "Corolla")
+print(c.brand, c.model)
+
+
+
+# 77. Create a class with a constructor.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+p = Person("Surya", 22)
+print(p.name, p.age)
+
+
+
+# 78. Implement inheritance between two classes.
+
+class Animal:
+    def speak(self):
+        return "..."
+class Dog(Animal):
+    pass
+d = Dog()
+print(d.speak())
+
+
+
+# 79. Override a method in a subclass.
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+cat = Cat()
+print(cat.speak())
+
+
+
+# 80. Create a class with a static method.
+
+class MathHelper:
+    @staticmethod
+    def add(a, b):
+        return a + b
+print(MathHelper.add(2,4))
+
+
+
+# 81. Implement a class using a property decorator.
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    @property
+    def area(self):
+        return 3.14159 * self.radius ** 2
+circle = Circle(2)
+print(circle.area)
+
+
+
+# 82. Build a simple Stack class.
+
+class Stack:
+    def __init__(self):
+        self.items = []
+    def push(self, item):
+        self.items.append(item)
+    def pop(self):
+        return self.items.pop()
+    def is_empty(self):
+        return len(self.items) == 0
+s = Stack()
+s.push(1)
+s.push(2)
+print(s.pop())
