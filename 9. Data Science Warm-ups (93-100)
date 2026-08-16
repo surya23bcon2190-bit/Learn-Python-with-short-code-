@@ -1,0 +1,63 @@
+# 93. Calculate the mean, median, and mode of a list.
+
+import statistics as st
+data = [4,8,6,5,3,8,9,6]
+print(st.mean(data), st.median(data), st.mode(data))
+
+
+
+# 94. Calculate standard deviation manually, without a library.
+
+def std_dev_manual(lst):
+    mean = sum(lst) / len(lst)
+    variance = sum((x - mean) ** 2 for x in lst) / len(lst)
+    return variance ** 0.5
+print(std_dev_manual([2,4,4,4,5,5,7,9]))
+
+
+
+# 95. Generate random numbers and examine their distribution.
+
+import random
+nums = [random.randint(1, 100) for _ in range(10)]
+print(nums)
+
+
+
+# 96. Load data into a pandas DataFrame and print summary statistics.
+
+import pandas as pd
+df = pd.DataFrame({"a": [1,2,3], "b": [4,5,6]})
+print(df.describe())
+
+
+
+# 97. Plot a simple line chart with matplotlib.
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3], [4,5,6])
+plt.show()
+
+
+
+# 98. Perform a basic groupby and aggregation with pandas.
+
+df2 = pd.DataFrame({"category": ["A", "A", "B"], "value":[10,20,30]})
+grouped = df2.groupby("category")["value"].sum()
+print(grouped)
+
+
+
+# 99. Handle missing values in a small pandas DataFrame.
+
+df3 = pd.DataFrame({"a": [1, None, 3]})
+filled = df3.fillna(0)
+print(filled)
+
+
+
+# 100.Load a CSV file and filter rows based on a condition using pandas.
+
+df4 = pd.read_csv("data.csv")
+filtered = df4[df4["x"] > 2]
+print(filtered)
