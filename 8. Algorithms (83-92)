@@ -77,15 +77,16 @@ print(binary_search([1,3,5,7,9],5))
 
 def is_balanced(s):
     stack = []
-    pairs = { ')' : '(', '[' : ']','{' : '}'}
+    pairs = { ')' : '(', ']' : '[', '}' : '{'}
     for c in s:
         if c in '([{':
             stack.append(c)
         elif c in ')]}':
             if not stack or stack.pop() != pairs[c]:
                 return False
-        return not stack
+    return not stack
 print(is_balanced("({[]})"))
+
 
 
 
